@@ -20,13 +20,13 @@ pub fn collect_files(root: PathBuf) -> Vec<PathBuf> {
     for entry in entries.flatten() {
       let path = entry.path();
       if path.is_dir() {
-        if !IGNORE_DIR.is_ignored(&path.to_str().unwrap()) {
+        if !IGNORE_DIR.is_ignored(&path.file_name().unwrap().to_str().unwrap()) {
           stack.push(path);
         }
       } else {
         if
-          !IGNORE_FILE.is_ignored(&path.to_str().unwrap())
-          && is_supported_file_extension(&path.to_str().unwrap())
+          !IGNORE_FILE.is_ignored(&path.file_name().unwrap().to_str().unwrap())
+          && is_supported_file_extension(&path.file_name().unwrap().to_str().unwrap())
         {
         files.push(path);
         }
