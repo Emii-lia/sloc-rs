@@ -5,7 +5,7 @@ edition = "2024"
 readme = "README.md"
 description = "CLI tool to count source lines of code (SLOC) in a project."
 license = "MIT"
-categories = ["command-line-utilities", "development-tools", "code-analysis"]
+categories = ["command-line-utilities", "development-tools"]
 repository = "https://github.com/Emii-lia/sloc-rs"
 keywords = ["sloc", "code", "cli", "rust", "counter"]
 
