@@ -11,6 +11,7 @@ pub mod scanner;
 pub mod utils;
 pub mod commands;
 pub mod cli;
+pub mod test;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let start = Instant::now();
