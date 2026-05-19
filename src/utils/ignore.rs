@@ -6,10 +6,10 @@ pub struct IgnoreRules {
 }
 
 pub const IGNORE_FILE: IgnoreRules = IgnoreRules {
-  starts_with: &[".", "_"],
-  ends_with: &[".log", ".tmp", ".bak", ".lock", ".md"],
-  contains: &[],
-  exact: &[],
+  starts_with: &[".", "_", ".env"],
+  ends_with: &[".log", ".tmp", ".bak", ".lock", ".md", ".css.map"],
+  contains: &["LICENSE"],
+  exact: &["package-lock.json", "yarn.lock", "pnpm-lock.yaml", "bun.lockb"],
 };
 
 pub const IGNORE_DIR: IgnoreRules = IgnoreRules {
@@ -18,7 +18,8 @@ pub const IGNORE_DIR: IgnoreRules = IgnoreRules {
   contains: &[],
   exact: &[
     ".git", ".idea", ".vscode", ".cache", ".output", "node_modules",
-    "target", "dist", "build", "vendor", "logs", "test", "tests", "public"
+    "target", "dist", "build", "vendor", "logs", "test", "tests", "public", "logs",
+    "static", "assets", "media", "uploads", "tmp", "temp", "backup", "backups",
   ],
 };
 

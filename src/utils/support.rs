@@ -4,5 +4,5 @@ const SUPPORTED_FILE_EXTENSIONS: &[&str] = &[
 ];
 
 pub fn is_supported_file_extension(path: &str) -> bool {
-  SUPPORTED_FILE_EXTENSIONS.iter().any(|ext| path.ends_with(ext))
+  SUPPORTED_FILE_EXTENSIONS.iter().any(|ext| path.ends_with(ext)) || !path.contains('.')
 }
