@@ -52,4 +52,4 @@ Done!
 
 ## License
 
-This project is licensed under the MIT License (or whichever license you prefer).
+This project is licensed under the MIT License
